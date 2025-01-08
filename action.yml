@@ -55,11 +55,11 @@ runs:
   using: "composite"
   steps:
     - name: Install binaries
-      uses: taiki-e/install-action@v2
+      uses: aranya-project/install-action@main
       with:
         tool: cargo-semver-checks@0.38, release-plz@${{ inputs.version }}
     - name: Configure git user from GitHub token
-      uses: MarcoIeni/git-config@v0.1
+      uses: aranya-project/git-config@main
     - name: Run release-plz
       id: release-plz
       shell: bash
